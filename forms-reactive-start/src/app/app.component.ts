@@ -67,14 +67,14 @@ export class AppComponent implements OnInit {
 
   forbiddenEmail(control: FormControl): Promise<any> | Observable<any> {
     return new Promise<any>((resolve, _reject) => {
-      setTimeout(()=>{
-        if(control.value === 'kuro@gmail.com'){
-          resolve({'emailIsForbidden': true});
+      setTimeout(() => {
+        if (control.value === 'kuro@gmail.com') {
+          resolve({ 'emailIsForbidden': true });
         }
-        else{
+        else {
           resolve(null);
         }
-      },1000)
+      }, 1000)
     })
   }
 }
